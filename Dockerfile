@@ -1,10 +1,7 @@
-FROM python
+FROM frolvlad/alpine-python3
 MAINTAINER Oraclize "info@oraclize.it"
 
-COPY risk.py /
-COPY earthquakes.csv /
+COPY claim.py /
 
 RUN pip3 install requests
-RUN pip3 install numpy
-RUN pip3 install pandas
-CMD python ./risk.py
+CMD python ./claim.py
